@@ -46,9 +46,8 @@ def main():
     if navbar_menu == 'Image Generation':
         header = st.title('Image Generation using `Stable Diffusion` :milky_way:')
         prompt = st.text_area('Enter Prompt')
-           # recording = audio_record(audio)
         st.write("or Auto-record")
-        filepath = "/content/audio.wav" 
+        filepath = "audio.wav" 
         
         #Audio record feature
         audio = audiorecorder("Click to record", "Click to stop recording")
@@ -82,7 +81,7 @@ def main():
         uploaded_file = st.file_uploader('Upload Image', type=['PNG', 'JPEG'])
         prompt_text = st.text_area('Enter Prompt')
         st.write("or Auto-record")
-        audio_filepath = "/content/audio.wav"     
+        audio_filepath = "audio.wav"     
 
         #Audio record feature    
         audio = audiorecorder("Click to record", "Click to stop recording")
@@ -93,7 +92,7 @@ def main():
             # Transcribe audio
         transcribed_text = audio_transcription(audio_filepath)
         if uploaded_file is not None:
-          filepath = '/content/' + uploaded_file.name
+          filepath = '' + uploaded_file.name
           with open(filepath, 'wb') as f:
             f.write(uploaded_file.read())
         if st.button('Generate'):
