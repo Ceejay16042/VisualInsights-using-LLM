@@ -3,18 +3,22 @@ name: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
-    
-  #to run this workflow manually from the actions tab
+  # To run this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14' # Use the latest Node.js version here
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://Clinton1604:$HF_TOKEN@huggingface.co/spaces/Clinton1604/VisualInsights main
+        run: git push --force https://Clinton1604:$HF_TOKEN@huggingface.co/spaces/Clinton1604/VisualInsights main
