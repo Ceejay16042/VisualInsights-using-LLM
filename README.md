@@ -26,5 +26,10 @@ https://github.com/Ceejay16042/VisualInsights-using-LLM/assets/65743504/0fda8c75
 AI-based image generation utilizing multimodal audio input.
 
 
+https://github.com/Ceejay16042/VisualInsights-using-LLM/assets/65743504/3367b632-e1fd-483d-a7c9-df9b5074ed31
+
+
+
+
 
 
