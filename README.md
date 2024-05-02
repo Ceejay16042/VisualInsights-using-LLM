@@ -17,10 +17,13 @@ VisualInsights is a multimodal AI application that generates AI images and perfo
 
 ## Demo
 
-AI generation real-time demo
+AI generation real-time demo using text input
 
 
 https://github.com/Ceejay16042/VisualInsights-using-LLM/assets/65743504/0fda8c75-0626-4f23-ae26-07d9d59f6455
+
+
+AI-based image generation utilizing multimodal audio input.
 
 
 
